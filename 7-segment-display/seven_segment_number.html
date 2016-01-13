@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %} Seven Segment Number{% endblock %}
+
+{% block content %}
+<form action = "." method = "GET">
+	<label for ="q"> Enter Number: </label>
+	<input type = "text" size = "20" maxlength = "20" name = "q" value = "{{query|escape}}">
+	<input type = "submit" value = "Submit">
+</form>
+<p> The seven segment number display of {{number_to_display}} is </p>
+<pre>
+{{str_to_display}}
+</pre>
+{% endblock %}
